@@ -25,8 +25,6 @@ writepgm <- function(d, colours=256, filename="output.pgm") {
 # Write out a matrix d as pbm.
 # - threshold = threshold at which a number is 1 rather than 0
 # - filename = file to write to
-#
-# NOTE: we convert d to integers via floor.
 writepbm <- function(d, threshold=0.5, filename="output.pbm") {
   y = nrow(d)
   x = ncol(d)

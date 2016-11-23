@@ -39,8 +39,8 @@ func Writepgm(d [][]int, white int, filename string) {
     file.WriteString("\n")
 
 // Write out d.
-    for i = 0; i < x; i++ {
-        for j = 0; j < y; j++ {
+    for j = 0; j < y; j++ {
+        for i = 0; i < x; i++ {        
             file.WriteString(strconv.Itoa(d[i][j]))
             file.WriteString("\n")
         }
@@ -73,11 +73,10 @@ func Writepbm(d [][]int, threshold float64, filename string) {
     file.WriteString("\n")
 
 // Write out d.
-    for i = 0; i < x; i++ {
-        for j = 0; j < y; j++ {
+    for j = 0; j < y; j++ {
+        for i = 0; i < x; i++ {        
             if float64(d[i][j]) >= threshold {
-                file.WriteString("1\n")
-                
+                file.WriteString("1\n")                
             } else {
                 file.WriteString("0\n")
             }

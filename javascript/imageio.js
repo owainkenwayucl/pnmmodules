@@ -3,7 +3,6 @@
   Owain Kenway
  */
 
-
 module.exports = {
 // Write PGM images.
 // d - the 2d array to write.
@@ -68,6 +67,5 @@ module.exports = {
 // Tidy up
         outfile.end('');
     }
-
 
 }

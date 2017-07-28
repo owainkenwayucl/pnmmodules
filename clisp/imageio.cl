@@ -7,8 +7,8 @@
 
 ; NOTE: we convert d to integers via floor.
 (defun writepgm (d white filename)
-  (defvar w (array-dimension d 0))
-  (defvar h (array-dimension d 1))
+  (setq w (array-dimension d 0))
+  (setq h (array-dimension d 1))
  
   (with-open-file (pnmfile filename 
                        :direction :output 
@@ -31,8 +31,8 @@
 ; - threshold - threshold at which a number is 1 rather than 0
 ; - filename = file to write to
 (defun writepbm (d threshold filename)
-  (defvar w (array-dimension d 0))
-  (defvar h (array-dimension d 1))
+  (setq w (array-dimension d 0))
+  (setq h (array-dimension d 1))
  
   (with-open-file (pnmfile filename 
                        :direction :output 

@@ -18,7 +18,7 @@ Type
   m - the value of white (max value).
   filename - the file to write to/
 }
-procedure writepgm(Const d:pixels; Const m:Integer; Const filename:String);
+Procedure writepgm(Const d:pixels; Const m:Integer; Const filename:String);
 
 { 
   Procedure to write out PBM images
@@ -27,12 +27,12 @@ procedure writepgm(Const d:pixels; Const m:Integer; Const filename:String);
   threshold - the value at which 0 becomes 1..
   filename - the file to write to/
 }
-procedure writepbm(Const d:pixels; Const threshold:Real; Const filename:String);
+Procedure writepbm(Const d:pixels; Const threshold:Real; Const filename:String);
 
 
 Implementation
 
-var 
+Var 
   i, j : Integer;
   outfile : Text;
 
@@ -60,7 +60,7 @@ Procedure writepgm(Const d:pixels; Const m:Integer; Const filename:String);
     { Write out 2D array. }
     For j := Low(d[0]) To High(d[0]) Do
       Begin
-        for i := Low(d) To High(d) Do
+        For i := Low(d) To High(d) Do
           Begin
             Write(outfile, d[i][j], ' ');
           End;
@@ -93,7 +93,7 @@ Procedure writepbm(Const d:pixels; Const threshold:Real; Const filename:String);
     { Write out 2D array. }
     For j := Low(d[0]) To High(d[0]) Do
       Begin
-        for i := Low(d) To High(d) Do
+        For i := Low(d) To High(d) Do
           Begin
             If (d[i][j] >= threshold)  Then
               Write(outfile, 1, ' ')

@@ -85,7 +85,7 @@ Procedure writepbm(Const d:pixels; Const threshold:Real; Const filename:String);
     Assign(outfile, filename);
     Rewrite(outfile);
 
-    { Write PGM header. }
+    { Write PBM header. }
     WriteLn(outfile, 'P1');
     WriteLn(outfile, '# Written by pnmmodules (https://github.com/owainkenwayucl/pnmmodules)');
     WriteLn(outfile, Length(d), ' ', Length(d[Low(d)]));

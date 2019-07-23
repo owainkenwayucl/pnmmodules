@@ -51,9 +51,10 @@ def writepbm(d, threshold, filename):
     for j in range(y):
         for i in range(x):
             if d[i][j] >= threshold:
-                f.write('1\n')
+                f.write('1 ')
             else:
-                f.write('0\n')
+                f.write('0 ')
+        f.write('\n')
 
 # Tidy up.
     f.close()
